@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+/* input Name */
+
+.inputName {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.img-title {
+  width: 400px;
+}
+
+.img-entrenador {
+  height: 300px;
+}
+
 /* Pokemon Card */
 
 .pokemon-card {

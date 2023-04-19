@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { changeName } from "../store/slices/name.slice";
+import pokedexHome from "../assets/img/pokedexHomeEntrenador.png";
+import pokedexTitle from "../assets/img/pokedexHome.svg";
 
 const InputName = () => {
   const [userName, setUserName] = useState("");
@@ -14,14 +16,21 @@ const InputName = () => {
   };
 
   return (
-    <div>
-      <h1>Input Name</h1>
-      <input
-        type="text"
-        onChange={(e) => setUserName(e.target.value)}
-        value={userName}
-      />
-      <button onClick={enterName}>Enter</button>
+    <div className="inputName">
+      <div>
+        <img className="img-title" src={pokedexTitle} alt="" />
+        <h1>Hello trainer!</h1>
+        <img className="img-entrenador" src={pokedexHome} alt="" />
+      </div>
+      <div>
+        <input
+          placeholder="Pon Tu Nombre"
+          type="text"
+          onChange={(e) => setUserName(e.target.value)}
+          value={userName}
+        />
+        <button onClick={enterName}>Enter</button>
+      </div>
     </div>
   );
 };
