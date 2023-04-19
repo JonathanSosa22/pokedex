@@ -4,15 +4,20 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(41, 39, 39);
+  color: white;
+}
+
 /* input Name */
 
 .inputName {
-  margin: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .img-title {
@@ -27,6 +32,20 @@
 
 .img-entrenador {
   height: 300px;
+}
+
+/* Pokedex */
+
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
 }
 
 /* Pokemon Card */

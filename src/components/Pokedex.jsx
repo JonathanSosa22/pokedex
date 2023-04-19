@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PokemonCard from "./PokemonCard";
 import { useNavigate } from "react-router-dom";
+import banner from "../assets/img/banner.svg";
 
 const Pokedex = () => {
   const userName = useSelector((state) => state.name);
@@ -46,23 +47,25 @@ const Pokedex = () => {
   };
 
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <h2>Welcome {userName}!</h2>
-      <input
-        type="text"
-        placeholder="Search Pokemon"
-        value={pokemonName}
-        onChange={(e) => setPokemonName(e.target.value)}
-      />
-      <button onClick={searchPokemon}>Search</button>
-      <select onChange={filterType} name="" id="">
-        {types.map((pokeType) => (
-          <option key={pokeType.name} value={pokeType.url}>
-            {pokeType.name}
-          </option>
-        ))}
-      </select>
+    <div className="pokedex">
+      <div className="banner">
+        <img src={banner} alt="" />
+        <h2>Welcome {userName}!</h2>
+        <input
+          type="text"
+          placeholder="Search Pokemon"
+          value={pokemonName}
+          onChange={(e) => setPokemonName(e.target.value)}
+        />
+        <button onClick={searchPokemon}>Search</button>
+        <select onChange={filterType} name="" id="">
+          {types.map((pokeType) => (
+            <option key={pokeType.name} value={pokeType.url}>
+              {pokeType.name}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="pokedex-card">
         {pokemonPaginated?.map((pokemon) => (
           <ul
