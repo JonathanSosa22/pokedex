@@ -19,6 +19,12 @@
   width: 400px;
 }
 
+@media (max-width: 480px) {
+  .img-title {
+    width: 340px;
+  }
+}
+
 .img-entrenador {
   height: 300px;
 }
