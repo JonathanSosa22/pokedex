@@ -13,12 +13,14 @@ const PokedexDetail = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>{pokemonDetail.name}</h1>
-      <img
-        src={pokemonDetail.sprites?.other["official-artwork"].front_default}
-        alt=""
-      />
+    <div className="detail">
+      <div>
+        <h1>{pokemonDetail.name}</h1>
+        <img
+          src={pokemonDetail.sprites?.other["official-artwork"].front_default}
+          alt=""
+        />
+      </div>
     </div>
   );
 };

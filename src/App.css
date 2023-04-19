@@ -44,6 +44,16 @@ body {
   text-align: center;
 }
 
+.pokedex-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pokedex-card li {
+  list-style: none;
+}
+
 .banner img {
   width: 100%;
 }
@@ -69,14 +79,13 @@ body {
   text-decoration: none;
 }
 
-/* Pokedex */
+/* Detail */
 
-.pokedex-card {
+.detail {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-.pokedex-card li {
-  list-style: none;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
