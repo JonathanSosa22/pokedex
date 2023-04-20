@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(41, 39, 39);
-  color: white;
-}
-
 /* input Name */
 
 .inputName {
@@ -88,4 +83,11 @@ body {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+}
+
+/* Modo Oscuro */
+
+.dark-mode {
+  background-color: #1f1e1e;
+  color: #fff;
 }

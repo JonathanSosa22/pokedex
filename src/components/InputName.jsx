@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { changeName } from "../store/slices/name.slice";
 import pokedexHome from "../assets/img/pokedexHomeEntrenador.png";
 import pokedexTitle from "../assets/img/pokedexHome.svg";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 const InputName = () => {
   const [userName, setUserName] = useState("");
@@ -30,6 +31,9 @@ const InputName = () => {
           value={userName}
         />
         <button onClick={enterName}>Enter</button>
+      </div>
+      <div>
+        <ToggleDarkMode />
       </div>
     </div>
   );
